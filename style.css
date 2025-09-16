@@ -1,0 +1,32 @@
+* {
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.books { 
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fit, minmax(360px, 150px));
+  gap: 1.5rem;
+}
+
+.book {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background-color: rgb(162, 101, 219);
+  padding: 30px;
+}
+
+.add-btn {
+  align-self: center;
+  padding: 5px 20px;
+  border: 10px;
+  cursor: pointer;
+}

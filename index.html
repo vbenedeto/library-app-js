@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="script.js" defer></script>
+  <link rel="stylesheet" href="style.css">
+  <title>Books</title>
+</head>
+<body>
+    <button class="add-btn">New Book</button>
+  <dialog>
+    <form id="form" action="#">
+      <div class="field">
+        <label for="bookTitle">
+          Title
+        </label>
+        <input type="text" name="book-title" id="bookTitle">
+      </div>
+      <div class="field">
+        <label for="bookAuthor">
+          Author
+        </label>
+        <input type="text" name="book-author" id="bookAuthor">
+      </div>
+      <div class="field">
+        <label for="bookPages">
+          Pages
+        </label>
+        <input type="number" name="bookpages" id="bookPages">
+      </div>
+      <div class="field">
+        <span>
+          Finished
+        </span>
+        <input type="radio" name="readStatus" value="true" id="read-yes"> 
+        <label for="read-yes">Yes</label>
+        <input type="radio" name="readStatus" value="false" id="read-no"> 
+        <label for="read-no">No</label>
+      </div>
+      <button type="submit">Add Book</button>
+    </form>
+  </dialog>
+  <div class="books">
+  </div>
+</body>
+</html>
