@@ -36,6 +36,10 @@ function Book(title, author, pages, read) {
   this.id = crypto.randomUUID();
 }
 
+Book.prototype.toggleStatus = function() {
+  this.read = !this.read;
+};
+
 function createBookCard(book, bookId) {
   const newCard = document.createElement("div");
   newCard.classList.add("book");
@@ -75,6 +79,11 @@ function createBookCard(book, bookId) {
     const parentCard = event.target.parentElement;
     const bookId = parentCard.id;
     myLibrary = myLibrary.filter((book) => book.id !== bookId);
+    displayLibrary();
+  })
+
+  switchStatusBtn.addEventListener("click", () => {
+    book.toggleStatus();
     displayLibrary();
   })
 
