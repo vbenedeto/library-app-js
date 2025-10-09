@@ -1,14 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="script.js" defer></script>
   <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap"
+    rel="stylesheet">
   <title>My Library</title>
 </head>
+
 <body>
+  <header>
+    <h1>My Library</h1>
     <button class="add-btn">New Book</button>
+  </header>
   <dialog>
     <form id="form" action="#">
       <div class="field">
@@ -33,15 +40,19 @@
         <span>
           Finished
         </span>
-        <input type="radio" name="readStatus" value="true" id="read-yes" checked> 
+        <input type="radio" name="readStatus" value="true" id="read-yes" checked>
         <label for="read-yes">Yes</label>
-        <input type="radio" name="readStatus" value="false" id="read-no"> 
+        <input type="radio" name="readStatus" value="false" id="read-no">
         <label for="read-no">No</label>
       </div>
       <button type="submit">Add Book</button>
     </form>
   </dialog>
-  <div class="books">
-  </div>
+  <main class="books">
+  </main>
+  <footer>
+      By <a href="https://github.com/vbenedeto" target="_blank">Vittoria</a>
+  </footer>
 </body>
+
 </html>
