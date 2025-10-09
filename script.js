@@ -42,41 +42,54 @@ Book.prototype.toggleStatus = function() {
 
 function createBookCard(book, bookId) {
   const newCard = document.createElement("div");
-  newCard.classList.add("book");
+  newCard.classList.add("card");
   newCard.id = bookId;
+
+  const cardContent = document.createElement("div");
+  cardContent.classList.add("card-content");
+  newCard.appendChild(cardContent);
 
   const title = document.createElement("h2");
   title.textContent = `${book.title}`;
   title.classList.add("card-title");
-  newCard.appendChild(title);
+  cardContent.appendChild(title);
 
   const author = document.createElement("h3");
   author.textContent = `By ${book.author}`;
   author.classList.add("card-author");
-  newCard.appendChild(author);
+  cardContent.appendChild(author);
 
   const pages = document.createElement("p");
   pages.textContent = `${book.pages} pages`;
   pages.classList.add("card-pages");
-  newCard.appendChild(pages);
+  cardContent.appendChild(pages);
 
   const readStatus = document.createElement("p");
-  readStatus.textContent = book.read ? "Readed: Yes" : "Readed: No";
   readStatus.classList.add("card-status");
-  newCard.appendChild(readStatus);
+  readStatus.appendChild(document.createTextNode("Status: "));
+
+  const statusValue = document.createElement("span");
+  statusValue.classList.add("bold");
+  statusValue.textContent = book.read ? "Completed" : "On Progress";
+  readStatus.appendChild(statusValue);
+  cardContent.appendChild(readStatus);
+
+  const cardActions = document.createElement("div");
+  cardActions.classList.add("card-actions");
+  newCard.appendChild(cardActions);
 
   const switchStatusBtn = document.createElement("button");
   switchStatusBtn.textContent = "Change Read Status";
-  switchStatusBtn.classList.add("switchStatusBtn");
-  newCard.appendChild(switchStatusBtn);
+  switchStatusBtn.classList.add("card-btn");
+  cardActions.appendChild(switchStatusBtn);
 
   const deleteBtn = document.createElement("button");
   deleteBtn.textContent = "Delete Book";
-  deleteBtn.classList.add("deleteBtn");
-  newCard.appendChild(deleteBtn);
+  deleteBtn.classList.add("card-btn");
+  cardActions.appendChild(deleteBtn);
 
   deleteBtn.addEventListener("click", (event) => {
-    const parentCard = event.target.parentElement;
+    const parentCard = event.target.closest(".card");
     const bookId = parentCard.id;
     myLibrary = myLibrary.filter((book) => book.id !== bookId);
     displayLibrary();
