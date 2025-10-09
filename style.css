@@ -1,32 +1,139 @@
 * {
   margin: 0;
+  box-sizing: border-box;
 }
 
 body {
   min-height: 100vh;
   display: flex;
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-weight: 400;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
+  background: #F8BCBC;
+}
+
+input, button {
+  font: inherit;
+}
+
+h1 {
+  font-size: 37px;
+  /* color: #F8BCBC; */
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 50px;
+  background-color: #e8d6f8;
 }
 
 .books { 
   display: grid;
   justify-content: center;
-  grid-template-columns: repeat(auto-fit, minmax(360px, 150px));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 400px));
   gap: 1.5rem;
+  padding: 30px 50px
 }
 
-.book {
+.card {
   display: flex;
   flex-direction: column;
   gap: 15px;
-  background-color: rgb(162, 101, 219);
+  background-color: #e8d6f8;
   padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  font-size: 18px; 
+  height: 320px;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  transition: all 0.2s ease-in-out;
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  flex-grow: 1;
+}
+
+.card-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.card > button {
+  display: inline;
+}
+
+.card-title {
+  font-size: 30px;
+}
+
+.card-author {
+  font-weight: 500;
+  color: #524e4e;
+}
+
+.card-author, .card-pages, .card-status {
+  font-size: 20px;
+}
+
+.btn-container {
+  display: flex;
+  gap: 10px;
+}
+
+.card-btn {
+  align-self: center;
+  padding: 5px 10px;
+  border: 10px;
+  cursor: pointer;
+  border-radius: 9px;
+  font-weight: 500;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+  background-color: #F8BCBC;
+}
+
+.card-btn:hover, .add-btn:hover {
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
 
 .add-btn {
   align-self: center;
-  padding: 5px 20px;
+  padding: 10px 25px;
   border: 10px;
   cursor: pointer;
+  border-radius: 9px;
+  font-weight: 500;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);  
+  background-color: #F8BCBC;
+}
+
+.bold {
+  font-weight: 600;
+}
+
+footer {
+  text-align: center;
+  padding-bottom: 20px;
+  font-size: 18px;
+  font-weight: 450;
+}
+
+footer a {
+  text-decoration: none;
+  color: #000000;
+}
+
+footer a:hover {
+  color: #a85d5d;
 }
