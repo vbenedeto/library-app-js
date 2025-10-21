@@ -122,11 +122,12 @@ function displayLibrary() {
   })
 }
 
-const hobbit = new Book('The Hobbit', 'J.R.R. Tolkien', 295, true);
-const twilight = new Book("Twilight", "Stephenie Meyer", 498, true);
+const hobbit = new Book("The Hobbit", "J.R.R. Tolkien", 310, true);
+const prophetSong = new Book("Prophet Song", "Paul Lynch", 309, false);
 const itTheClown = new Book("It", "Stephen King", 1184, false);
 const lotr = new Book("Lord of the Rings: The Fellowship of the Ring", "J.R.R. Tolkien", 423, true);
+const got = new Book("A Game Of Thrones", "George R. R. Martin", 694, true);
 
-myLibrary.push(hobbit, twilight, itTheClown, lotr);
+myLibrary.push(hobbit, prophetSong, itTheClown, lotr, got);
 
 displayLibrary(myLibrary);
