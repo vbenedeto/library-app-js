@@ -16,7 +16,10 @@
     <h1>My Library</h1>
     <button class="add-btn">New Book</button>
   </header>
-  <dialog>
+  <dialog> 
+    <div class="close-dialog-container">
+      <img class="close-dialog-container__btn" src="window-close.svg" alt="Close Icon Button">
+    </div>
     <form id="form" action="#">
       <div class="field">
         <label for="bookTitle">
@@ -36,22 +39,28 @@
         </label>
         <input type="number" name="pages" id="bookPages">
       </div>
-      <div class="field">
+      <div class="field radios">
         <span>
           Finished
         </span>
-        <input type="radio" name="readStatus" value="true" id="read-yes" checked>
-        <label for="read-yes">Yes</label>
-        <input type="radio" name="readStatus" value="false" id="read-no">
-        <label for="read-no">No</label>
+
+        <div class="radio-option">
+          <input type="radio" name="readStatus" value="true" id="read-yes" checked>
+          <label for="read-yes">Yes</label>
+        </div>
+
+        <div class="radio-option">
+          <input type="radio" name="readStatus" value="false" id="read-no">
+          <label for="read-no">No</label>
+        </div>
       </div>
-      <button type="submit">Add Book</button>
+      <button class="card-btn" type="submit">Add Book</button>
     </form>
   </dialog>
   <main class="books">
   </main>
   <footer>
-      By <a href="https://github.com/vbenedeto" target="_blank">Vittoria</a>
+    By <a href="https://github.com/vbenedeto" target="_blank">Vittoria</a>
   </footer>
 </body>
 
