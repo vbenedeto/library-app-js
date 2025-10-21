@@ -2,14 +2,18 @@ const books = document.querySelector(".books");
 const addBtn = document.querySelector(".add-btn");
 const deleteBtn = document.querySelector(".deleteBtn");
 const dialog = document.querySelector("dialog");
+const closeDialogBtn = document.querySelector(".close-dialog-container__btn");
 const form = document.getElementById("form");
 let myLibrary = [];
-
 
 addBtn.addEventListener("click", () => {
   form.querySelectorAll("input[type='text'], input[type='number']").forEach(input => input.value = "");
   dialog.showModal();
-})
+});
+
+closeDialogBtn.addEventListener("click", () => {
+  dialog.close();
+});
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
