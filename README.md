@@ -8,7 +8,7 @@ A simple and clean web application to help you keep track of the books you've re
 * **Add Books:** Easily add new books to your library through a simple form.
 * **Track Read Status:** Mark books as "Completed" or "On Progress."
 * **Remove Books:** Delete books from your collection.
-* **Responsive Design:** A clean, grid-based layout that works on different screen sizes.
+* **Responsive Design:** A grid-based layout that works on different screen sizes.
 
 
 ## 🚀 Live Preview
